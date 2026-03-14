@@ -265,3 +265,40 @@ footer {
         max-width: 280px;
     }
 }
+
+@media (max-width: 900px) {
+    /* 1. Запрещаем всему вылезать за экран */
+    * {
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+    }
+
+    /* 2. Контейнер делаем гибким */
+    .hero-container, .container {
+        display: flex !important;
+        flex-direction: column !important; /* Всё в один столбик */
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 0 auto !important;
+    }
+
+    /* 3. Лечим видео (чтобы не распирало сайт) */
+    .hero-video, .hero-video video {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        flex: none !important;
+    }
+
+    /* 4. Лечим боковые блоки */
+    .hero-side {
+        width: 100% !important;
+        padding: 0 !important;
+        flex: none !important;
+        text-align: center;
+    }
+
+    /* 5. Уменьшаем гигантские шрифты */
+    h3 { font-size: 1.2rem !important; }
+    p { font-size: 0.9rem !important; }
+}
