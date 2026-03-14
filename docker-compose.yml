@@ -4,14 +4,13 @@ services:
   web-site:
     build: .
     container_name: safe_city
+    volumes:
+      - .:/app
     networks:
       - web_network
     restart: always
-    command: python app.py
     ports:
       - "8080:8080"
-    volumes:
-      - .:/app
     environment:
       - FLASK_ENV=production
 
