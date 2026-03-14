@@ -19,5 +19,6 @@ jobs:
             git config --global --add safe.directory /root/projects/safe-city
             git reset --hard
             git pull origin main
+            docker compose down
             docker-compose up -d --build        
             docker system prune -f
