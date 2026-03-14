@@ -1,0 +1,23 @@
+name: Deploy Website
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /root/projects/safe-city
+            git config --global --add safe.directory /root/projects/safe-city
+            git reset --hard
+            git pull origin main
+            docker-compose up -d --build        
+            docker system prune -f
