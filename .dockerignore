@@ -1,0 +1,16 @@
+
+venv/
+.venv/
+env/
+
+# Кэш Python
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.idea/
+
+*.log
+.git/
+.gitignore
