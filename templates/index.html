@@ -31,6 +31,35 @@
     </header>
     <section class="hero-section">
         <div class="hero-container">
+            <div class="hero-side right">
+                <h3>Ваше имущество под надежной защитой!</h3>
+                <div class="info-box">
+                    <p><strong>Мы можем защитить :</strong></p>
+                    <p> Дом и квартиру.</p>
+                    <p> Офис и магазин.</p>
+                    <p> Склад и производство.</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Выезд специалиста и проектирование систем безопасности БЕСПЛАТНО.</strong></p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Контрольный прибор нами предоставляется бесплатно на весь период оказания услуг , а так же доступ к мобильному приложению.</strong></p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Цена за дополнительное оборудование ниже рыночнок , так как мы напрямую сотрудничаем с заводами изготовителями . </strong></p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Абонентская плата от 799 рублей в месяц . </strong></p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Мы несем материальную ответственность за причиненный ущерб . </strong></p>
+                </div>
+            </div>
+            <div class="hero-video">
+                <video autoplay muted loop playsinline>
+                    <source src="{{ url_for('static', filename='promo/secpromo.mp4') }}" type="video/mp4">
+                </video>
+            </div>
             <div class="hero-side left">
                 <h3>Развеиваем мифы</h3>
                 <div class="myth-box">
@@ -44,29 +73,8 @@
                     <strong>Факт:</strong> Мы гарантируем прибытие группы ГБР во время , так как наши экипажи всегда находятся в боевой готовности, регулярно курсируя в районах охраняемых объектов .</p>
                 </div>
             </div>
-            <div class="hero-video">
-                <video autoplay muted loop playsinline>
-                    <source src="{{ url_for('static', filename='promo/secpromo.mp4') }}" type="video/mp4">
-                </video>
-            </div>
-            <div class="hero-side right">
-                <h3>Ваше имущество под надежной защитой!</h3>
-                <div class="info-box">
-                    <p><strong>Мы можем защитить:</strong></p>
-                    <p> Дом и квартиру.</p>
-                    <p> Офис и магазин.</p>
-                    <p> Склад и производство.</p>
-                </div>
-                <div class="info-box">
-                    <p><strong>Техника:</strong> Современное беспроводное оборудование.</p>
-                </div>
-                <div class="info-box">
-                    <p><strong>Гарантия:</strong> Полная материальная ответственность.</p>
-                </div>
-            </div>
         </div>
     </section>
-
     <section id="services" class="services">
         <div class="container">
             <h3 style="text-align: center; margin-bottom: 30px;">Наши услуги</h3>
@@ -112,10 +120,3 @@
             <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2021 Охранное агентство «Безопасный город»</p>
         </div>
     </footer>
-    <a href="tel:+79002469999" class="floating-phone">
-    <span class="material-icons">phone</span>
-    </a>
-
-
-</body>
-</html>
